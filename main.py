@@ -80,10 +80,14 @@ class createTarget:
         '''creates a page screenshot of target website'''
         # this needs to be the correct resolution... How to find targets native resolution? perhaps capture in several aspect ratio, use js to detect?
         from selenium import webdriver
-        driver = webdriver.Chrome()
+        from webdriver_manager.chrome import ChromeDriverManager
+        o = webdriver.ChromeOptions()
+        driver = webdriver.Chrome(ChromeDriverManager().install(), options=o)
+        #driver = webdriver.Chrome()
         url = self.url
         driver.get(url)
         driver.save_screenshot('ss.png')
+        driver.close()
 
     def stage(self):
         '''changes the placeholders inside the temp html files and moves to staging folder'''
